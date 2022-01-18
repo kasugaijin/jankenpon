@@ -5,7 +5,10 @@ let games = 0;
 let result = document.getElementById('result');
 
 let gameButton = document.getElementById('play-game');
-gameButton.addEventListener('click', game)
+gameButton.addEventListener('click', game);
+
+let resetButton = document.getElementById('reset-game');
+resetButton.addEventListener('click', resetGame);
 
 function game() {
 
@@ -14,8 +17,6 @@ let computerSelection = choice[Math.floor(Math.random() * choice.length)];
 
 let getPlayerChoice = prompt('Enter rock paper or scissors')
 
-//make a function to house user prompt and then have a play button on the page, on click executes this function and nested playRound?
-
 
  function playRound (player, computer) {
     if (player == "paper" && computer == "rock") {
@@ -63,9 +64,6 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
  getPlayerChoice = prompt('Enter rock paper or scissors');
  
 
-//make a function to house user prompt and then have a play button on the page, on click executes this function and nested playRound?
-
-
  function playRound (player, computer) {
     if (player == "paper" && computer == "rock") {
         result.textContent = "Paper beats " + computerSelection + ", you win!";
@@ -111,9 +109,6 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
  getPlayerChoice = prompt('Enter rock paper or scissors');
  
 
-//make a function to house user prompt and then have a play button on the page, on click executes this function and nested playRound?
-
-
  function playRound (player, computer) {
     if (player == "paper" && computer == "rock") {
         result.textContent = "Paper beats " + computerSelection + ", you win!";
@@ -124,11 +119,11 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
         computerScore ++;
         games ++;
     } else if (player == "rock" && computer == "rock") {
-        alert("It\'s a tie! Play again!");
+        result.textContent = "It\'s a tie!";
         games ++;
         //play again 
     } else if (player == "paper" && computer == "paper") {
-        alert("It\'s a tie! Play again!");
+        result.textContent = "It\'s a tie!";
         games ++;
         //play again don't count game
     } else if (player == "paper" && computer == "scissors") {
@@ -140,7 +135,7 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
         playerScore ++;
         games ++;
     } else if (player == "scissors" && computer == "scissors") {
-        alert("It\'s a tie! Play again!");
+        result.textContent = "It\'s a tie!";
         games ++;
         //play again don't count game
     } else if (player == "rock" && computer == "scissors") {
@@ -158,6 +153,7 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
  }
 
  playRound(getPlayerChoice, computerSelection);
+ 
 
  let cmpScrDisplay = document.getElementById('computer-score');
  cmpScrDisplay.textContent = "Computer score: " + computerScore; 
@@ -168,8 +164,35 @@ let getPlayerChoice = prompt('Enter rock paper or scissors')
  let plyScrDisplay = document.getElementById("player-score");
  plyScrDisplay.textContent = "Your score: " + playerScore;
 
- result.textContent = "";
+ endGame()
+  
 }
+
+
+
+
+
+function endGame() {
+    if (games >= 3) {
+        if (playerScore > computerScore) {
+            result.textContent = "You have played " + games + " games and you won!"
+        } else if (playerScore < computerScore) {
+            result.textContent = "You have played " + games + " games and the computer won!"
+        } else {
+            result.textContent = "You have played " + games + " games and it is a tie!"
+        }
+   }
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    games = 0;
+
+}
+
+
+
  
 
 //let plyChDisplay = document.getElementById("player-choice");
