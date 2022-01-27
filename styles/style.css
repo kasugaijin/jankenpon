@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#020202, #4b4949);
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  }
+
+  a {
+    color: white;
+  }
+
+  #music-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: rgb(144, 138, 145);
+  }
+
+#title {
+    padding-top: 20px;
+}
+
+#gif {
+    margin-bottom: 40px;
+}
+
+#intro-div {
+    margin-bottom: 30px;
+}
+
+#intro {
+    width: 895px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(139, 156, 235);
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .05em solid rgb(255, 0, 221); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 5.5s steps(60, end),
+      blink-caret 0.75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    40% { border-color: rgb(240, 30, 194) }
+  }
+
+  #buttons {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #button-img {
+    width: 90px;
+    height: 90px;
+    object-fit:cover; /*this property does the magic*/
+    border-radius:20%;
+  }
+  
+  #rock, #paper, #scissors {
+    width: 145px;
+    height: 145px;
+    background-size:cover; /*this property does the magic*/
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: rgb(233, 62, 219);
+  }
+
+  #rock:hover, #paper:hover, #scissors:hover {
+    border-radius: 10px;
+    border-color: rgb(145, 110, 228);
+ 
+   /* HOVER ON */
+    -webkit-transition: border-radius 0.1s;
+  }
+
+  #scores-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  #commentary-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #reset-game {
+    font-size: 18px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+   #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: auto;
+    height: 30px;
+  }
+
+
+
+
+

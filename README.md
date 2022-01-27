@@ -1,3 +1,8 @@
-# jankenpon
-Basic javascript - rock, paper, scissors game
-Courtesy of the Odin Project
+Rock paper scissors game for The Odin Project
+
+Music: 
+Space Race by tubebackr | https://soundcloud.com/tubebackr
+Music promoted by https://www.free-stock-music.com
+
+Images:
+pnglux.com

@@ -5,17 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janken</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <p id="player-choice"></p>
-    <p id="player-score"></p>
-    <p id="computer-choice"></p>
-    <p id="computer-score"></p>
-    <p id="games-played"></p>
-    <p id="result"></p>
-    <input type="submit" value="Play game" id="play-game">
-    <input type="submit" value="Reset game" id="reset-game">
+    <div id="music-div">Music On/Off</div>
+    <div id="title"><img src="./media/coollogo_com-62093888.png" alt="neon title - Miami Nights Dance Off"></div>
+    <div id="gif"><img src="./media/danceoff.gif" height="170px"></div>
+
+    <div id="intro-div">
+    <p id="intro">Can you beat the machines in a dance off? First to 5 wins.</p>
+    </div>
     
-    <script src="./script.js"></script>
+    <div id="buttons"> 
+        <div id="rock">
+            <img src="./media/rock.png" id="button-img" class=""> 
+            <p>Rock</p>
+        </div>
+         <div id="paper">
+            <img src="./media/paper.png" id="button-img" class="">
+            <p>Paper</p>
+         </div>
+        <div id="scissors">
+            <img src="./media/scisso.png" id="button-img" class="">
+            <p>Scissors</p>
+        </div>
+    </div>
+
+    <div id="outputs">
+        <div id="scores-div">
+            <p id="player-score"></p>
+            <p id="computer-score"></p>
+        </div>
+        <div id="commentary-div">
+            <p id="commentary"></p>
+        </div>
+    </div>
+
+    <div id="reset-game">Reset</div>
+
+    <audio id="my-music" src="./media/music.mp3" autoplay loop></audio>
+    
+    <div id="footer">
+        <p>2022 Kasugaijin for <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></p>
+    </div>
+    
+    <script src="./script/script.js"></script>
 </body>
 </html>
