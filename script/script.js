@@ -10,7 +10,9 @@ let scissorsButton = document.getElementById('scissors');
 let commentary = document.getElementById('commentary');
 let playerScoreboard = document.getElementById('player-score');
 let computerScoreboard = document.getElementById('computer-score');
+let reset = document.getElementById('reset-game');
 
+reset.addEventListener('click', resetGame);
 rockButton.addEventListener('click', playGameRock);
 paperButton.addEventListener('click', playGamePaper)
 scissorsButton.addEventListener('click', playGameScissors)
@@ -74,20 +76,21 @@ function playGameScissors() {
 }
 
 function stopGame() { 
-if (computerScore > playerScore) {
-    commentary.textContent = "The computer outdanced you!";
-} else {
+    if (computerScore > playerScore) {
+        commentary.textContent = "The computer outdanced you!";
+    }   else {
     commentary.textContent = "You outdanced the computer!";
+    }
+    playerScore = 0; 
+    computerScore = 0; 
+    playerScoreboard.textContent = "";
+    computerScoreboard.textContent = "";
+    rockButton.removeEventListener('click', playGameRock);
+    paperButton.removeEventListener('click', playGamePaper);
+    scissorsButton.removeEventListener('click', playGameScissors);
+    reset.className = ('reset-focus');
+    reset.id = ("");
 }
-playerScore = 0; 
-computerScore = 0; 
-playerScoreboard.textContent = "";
-computerScoreboard.textContent = "";
-//commentary.textContent = "";
-}
-
-let reset = document.getElementById('reset-game');
-reset.addEventListener('click', resetGame);
 
 function resetGame(){
     playerScore = 0; 
@@ -95,7 +98,11 @@ function resetGame(){
     playerScoreboard.textContent = "";
     computerScoreboard.textContent = "";
     commentary.textContent = "";
-
+    rockButton.addEventListener('click', playGameRock);
+    paperButton.addEventListener('click', playGamePaper);
+    scissorsButton.addEventListener('click', playGameScissors);
+    reset.className = ('');
+    reset.id = ('reset-game');
 }
 
 let music = document.getElementById('my-music');
