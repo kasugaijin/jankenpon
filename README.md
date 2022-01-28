@@ -1,4 +1,4 @@
-Rock paper scissors game for The Odin Project
+Rock paper scissors game for The Odin Project - for desktop (not mobile friendly)
 
 Music: 
 Space Race by tubebackr | https://soundcloud.com/tubebackr
